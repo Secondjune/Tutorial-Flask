@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Profit Prediction</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center text-primary">Prediksi Profit dari Pengeluaran Startup</h1>
+        <hr>
+        <br>
+        <h2 class="text-center">Masukkan nilai untuk R&D Spend, Administration Spend, dan Marketing Spend</h2>
+        <br>
+        
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <form method="POST" action="/predict">
+                    <div class="form-group">
+                        <label for="RnD_Spend"><strong>R&D Spend</strong></label>
+                        <input type="number" class="form-control" name="RnD_Spend" id="RnD_Spend" placeholder="Masukkan nilai R&D Spend" min="0" required>
+                        <small id="RnDSpendHelp" class="form-text text-muted">Masukkan nilai R&D Spend (dalam dollar)</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Admin_Spend"><strong>Administration Spend</strong></label>
+                        <input type="number" class="form-control" name="Admin_Spend" id="Admin_Spend" placeholder="Masukkan nilai Administration Spend" min="0" required>
+                        <small id="AdminSpendHelp" class="form-text text-muted">Masukkan nilai Administration Spend (dalam dollar)</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Market_Spend"><strong>Marketing Spend</strong></label>
+                        <input type="number" class="form-control" name="Market_Spend" id="Market_Spend" placeholder="Masukkan nilai Marketing Spend" min="0" required>
+                        <small id="MarketSpendHelp" class="form-text text-muted">Masukkan nilai Marketing Spend (dalam dollar)</small>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
